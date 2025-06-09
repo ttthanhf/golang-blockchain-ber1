@@ -1,0 +1,20 @@
+[
+  {
+    "name": "alice",
+    "privateKey": "qSmuv6vFLPn75dk2Soo9A57x3YGNu5mZbYyEKZxe5CvZQJTEU",
+    "publicKey": "3pVfAvEn5eS7pSvgrty8cN4qHEAQXEW7TL8HqyyPyq3EoruUkUmxKEEYiTg9Y229KhmYehfsyaf9ZGCVwabiiQ9tiDHb5q",
+    "address": "ccipvEvwNbHSfj6VnZRpum3XkDCefKYDeaq9zamfq88esYDAS"
+  },
+  {
+    "name": "bob",
+    "privateKey": "BBZ4uNNfZ6Zq4jwEu334sqAMLaQNdLFZymGjNQzq2PKu2XHLL",
+    "publicKey": "3WxPWFTdGDoyjAHgAsM7kKFJuKY6aK1mWXYt3TZ7C9Jy1ypTTsycAGg2XCdxAgocaox5id2x7stzjP9X59dMyok8tU7dBp",
+    "address": "2pjwFnqwBDYxru7rtXFwePrVQ9bVu8n7nab6rqn3zDrTinQTMt"
+  },
+  {
+    "name": "thanh",
+    "privateKey": "dgvT1hJLJq9tWy6MDT4hgtNsZysBKxMgS1bg2UXM6AEDedR7d",
+    "publicKey": "3eVGAd4fytNcDdFZBRANMm6tdVqNc44jHkFBYZ4a5atCyJfqKKu2kyMorHzK8nPUpqJe7tXKcEvzsCFRVQH8Z1KWcz2HB3",
+    "address": "2Saa3vyS1ZHUB5bkAdZMtiT1NyRDSj84smLejiLVTL4Lc48JTS"
+  }
+]

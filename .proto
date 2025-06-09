@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "./pkg/p2p/pb/pb";
+
+message Empty {}
+
+message Transaction {
+  bytes sender = 1; 
+  bytes receiver = 2; 
+  double amount = 3;
+  int64 timestamp = 4;
+  bytes signature = 5; 
+  bytes publicKey = 6;
+}
+
+message Block {
+  repeated Transaction transactions = 1;
+  bytes merkle_root_hash = 2;
+  bytes previous_block_hash = 3;
+  bytes current_block_hash = 4;
+  uint64 height = 5;
+}
+
+message AVote {
+  bool approve = 1;
+  string nodeId = 2;
+  uint64 blockHeight = 3;
+}
+
+message BlockHeight {
+  uint64 height = 1;
+}
+
+message SteamNodeInfoResponse {
+  string nodeId = 1;
+  string nodeStatus = 2;
+}
+
+service Blockchain {
+  rpc SendTransaction(Transaction) returns (Empty);
+  rpc ProposeBlock(Block) returns (Empty);
+  rpc Vote(AVote) returns (Empty);
+  rpc GetBlock(BlockHeight) returns (Block);
+  rpc GetLatestBlock(Empty) returns (Block);
+  rpc CommitBlock(Empty) returns (Empty);
+
+  rpc StreamNodeInfo(Empty) returns (stream SteamNodeInfoResponse);
+}

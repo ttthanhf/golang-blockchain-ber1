@@ -1,0 +1,35 @@
+version: "3"
+
+tasks:
+  install:
+    cmds:
+      - go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+      - go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+      - go mod download
+
+  generate-protobuf:
+    cmds:
+      -  protoc --go_out=. --go-grpc_out=. .proto
+  
+  create-user:
+    cmds:
+      - go run .\cmd\cli\main.go create-user --name {{.NAME}}
+    vars:
+      NAME:
+        sh: 'echo ${NAME}'
+  
+  send-transaction:
+    cmds:
+      - go run ./cmd/cli/main.go send-transaction --sender {{.SENDER}} --receiver {{.RECEIVER}} --amount {{.AMOUNT}}
+  
+  leveldb-viewer:
+    cmds:
+      - leveldb-viewer --db ./data
+  
+  buildup:
+    cmds:
+      - docker-compose up -d --build
+    
+  monitor:
+    cmds:
+      - go run ./cmd/cli/main.go monitor-node

@@ -1,0 +1,13 @@
+{
+    "version": "0.0.0",
+    "configurations": [
+        {
+            "name": "Launch Node Validator",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/node/main.go",
+            "cwd": "${workspaceFolder}",
+        }
+    ]
+}
