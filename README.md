@@ -1,5 +1,5 @@
 
-# Blockchain Topic - Trần Tấn Thành
+# Blockchain Topic
 
 ## Requirements
 * [Go v1.24+](https://go.dev/dl/) or newer.
